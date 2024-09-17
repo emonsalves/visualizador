@@ -23,11 +23,13 @@ export const Visualizador = () => {
     }), []);
 
     return (
-        <div>
+        <div className="container">
             <Document
                 file={samplePDF}
                 onLoadSuccess={onDocumentLoadSuccess}
                 options={options}
+                loading="Cargando documento..."
+                style={{ width: 600 }}
             >
                 <Page pageNumber={pageNumber} />
             </Document>
