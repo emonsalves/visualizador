@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Visualizador1, Home, ErrorPage } from "../pages";
-import { Visualizador2 } from "../pages/Visualizador2";
+import { Visualizador1, Visualizador2, Home, ErrorPage } from "../pages";
 
 export const router = createBrowserRouter([
     {
