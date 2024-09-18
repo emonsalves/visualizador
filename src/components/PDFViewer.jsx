@@ -99,15 +99,9 @@ export const PDFViewer = ({ base64PDF }) => {
                 <button onClick={() => printPDF()}>Imprimir PDF</button>
             </div>
             <div>
-                <button onClick={zoomIn}>
-                    Zoom In
-                </button>
-                <button onClick={zoomOut}>
-                    Zoom Out
-                </button>
-                <button onClick={resetZoom}>
-                    Reset Zoom
-                </button>
+                <button onClick={() => zoomIn()}>Zoom In</button>
+                <button onClick={() => zoomOut()}>Zoom Out</button>
+                <button onClick={() => resetZoom()}>Reset Zoom</button>
             </div>
             <p>
                 <a href="/">Volver a la página de inicio</a>
