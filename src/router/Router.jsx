@@ -11,6 +11,5 @@ export const router = createBrowserRouter([
         path: "/visualizador",
         element: <Visualizador />,
         errorElement: <ErrorPage />,
-        redirectTo: "/",
     },
 ]);
