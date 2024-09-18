@@ -9,7 +9,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     import.meta.url,
 ).toString();
 
-export const Visualizador = () => {
+export const Visualizador1 = () => {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
 
@@ -50,6 +50,12 @@ export const Visualizador = () => {
                     Página Siguiente
                 </button>
             </div>
+            <p>
+                <a href="/visualizador2">Ir al otro visualizador</a>
+            </p>
+            <p>
+                <a href="/">Volver a la página de inicio</a>
+            </p>
         </div>
     );
 };
