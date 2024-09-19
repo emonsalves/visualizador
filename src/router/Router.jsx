@@ -1,15 +1,33 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Visualizador, Home, ErrorPage } from "../pages";
+import { Visualizador, Home, ErrorPage, Test } from "../pages";
+import { LayoutPublic, LayoutPrivate } from "../layouts";
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Home />,
+        element: <LayoutPublic />,
         errorElement: <ErrorPage />,
+        children: [
+            {
+                index: true,
+                element: <Home />,
+            },
+        ],
     },
     {
-        path: "/visualizador",
-        element: <Visualizador />,
+        path: "/auth/",
+        element: <LayoutPrivate />,
         errorElement: <ErrorPage />,
+        children: [
+            {
+                index: true,
+                path: "visualizador",
+                element: <Visualizador />,
+            },
+            {
+                path: "tester/:testerId",
+                element: <Test />,
+            },
+        ],
     },
 ]);
