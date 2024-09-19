@@ -1,5 +1,5 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import { Visualizador, Home, ErrorPage, Test } from "../pages";
+import { Visualizador, Home, ErrorPage, ParamPage, AdminPage } from "../pages";
 import { LayoutPublic, LayoutPrivate } from "../layouts";
 
 export const router = createBrowserRouter([
@@ -28,8 +28,12 @@ export const router = createBrowserRouter([
                 element: <Visualizador />,
             },
             {
-                path: "tester/:testerId",
-                element: <Test />,
+                path: "ParamPage/:testerId",
+                element: <ParamPage />,
+            },
+            {
+                path: "admin",
+                element: <AdminPage />,
             },
         ],
     },
