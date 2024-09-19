@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import { Visualizador, Home, ErrorPage, Test } from "../pages";
 import { LayoutPublic, LayoutPrivate } from "../layouts";
 
@@ -21,6 +21,9 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
+                element: <ErrorPage /> || <Navigate to="visualizador" />,
+            },
+            {
                 path: "visualizador",
                 element: <Visualizador />,
             },
