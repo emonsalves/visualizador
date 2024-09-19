@@ -73,7 +73,6 @@ export const PDFViewer = ({ base64PDF }) => {
                 onLoadSuccess={onDocumentLoadSuccess}
                 options={options}
                 loading="Cargando documento..."
-                style={{ width: 600 }}
             >
                 <Page
                     pageNumber={pageNumber}
@@ -103,9 +102,6 @@ export const PDFViewer = ({ base64PDF }) => {
                 <button onClick={() => zoomOut()}>Zoom Out</button>
                 <button onClick={() => resetZoom()}>Reset Zoom</button>
             </div>
-            <p>
-                <a href="/">Volver a la página de inicio</a>
-            </p>
         </div>
     );
 };

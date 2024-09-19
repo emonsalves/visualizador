@@ -1,15 +1,40 @@
-import { createBrowserRouter } from "react-router-dom";
-import { Visualizador, Home, ErrorPage } from "../pages";
+import { createBrowserRouter, Navigate } from "react-router-dom";
+import { Visualizador, Home, ErrorPage, ParamPage, AdminPage } from "../pages";
+import { LayoutPublic, LayoutPrivate } from "../layouts";
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Home />,
+        element: <LayoutPublic />,
         errorElement: <ErrorPage />,
+        children: [
+            {
+                index: true,
+                element: <Home />,
+            },
+        ],
     },
     {
-        path: "/visualizador",
-        element: <Visualizador />,
+        path: "/auth/",
+        element: <LayoutPrivate />,
         errorElement: <ErrorPage />,
+        children: [
+            {
+                index: true,
+                element: <ErrorPage /> || <Navigate to="visualizador" />,
+            },
+            {
+                path: "visualizador",
+                element: <Visualizador />,
+            },
+            {
+                path: "ParamPage/:paramId",
+                element: <ParamPage />,
+            },
+            {
+                path: "admin",
+                element: <AdminPage />,
+            },
+        ],
     },
 ]);
