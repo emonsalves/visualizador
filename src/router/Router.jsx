@@ -28,7 +28,7 @@ export const router = createBrowserRouter([
                 element: <Visualizador />,
             },
             {
-                path: "ParamPage/:testerId",
+                path: "ParamPage/:paramId",
                 element: <ParamPage />,
             },
             {

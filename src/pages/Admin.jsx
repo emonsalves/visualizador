@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useAuthorize } from '../hooks/useAuthorize';
+import { useAuthorize } from '../hooks';
 
 export const AdminPage = () => {
     const { isAuthorized, isAuthenticated } = useAuthorize(['admin']);
