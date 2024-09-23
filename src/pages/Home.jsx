@@ -9,6 +9,7 @@ export const Home = () => {
                 <li>Para ver el visualizador, navega a <Link to="/auth/visualizador">Visualizador</Link></li>
                 <li>Para ver el ParamPage, navega a <Link to="/auth/ParamPage/123">ParamPage</Link></li>
                 <li>Para ver la página de admin, navega a <Link to="/auth/admin">Admin</Link></li>
+                <li>Para ver la página de testWorker, navega a <Link to="/auth/Worker">Worker</Link></li>
             </ul>
         </div>
     )

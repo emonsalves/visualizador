@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import { Visualizador, Home, ErrorPage, ParamPage, AdminPage } from "../pages";
 import { LayoutPublic, LayoutPrivate } from "../layouts";
+import { Worker } from "../pages/Worker";
 
 export const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
                 path: "admin",
                 element: <AdminPage />,
             },
+            {
+                path: "worker",
+                element: <Worker />,
+            }
         ],
     },
 ]);
